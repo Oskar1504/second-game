@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel = "stylesheet" href = "style.css" type = "text/css">
+		
+		<script src ="js/script.js"></script>
+		<script src ="js/speicher.js"></script>
+	</head>
+	
+	<body>
+		<section>
+			<div class = "details">
+				<div class = "lager_info">
+					<p class = "info bold">Hier wird die Anzahl der Items im Lager angezeigt.<br>--------------------</p>
+					<p class = "info" id = "lager_info">haha</p>
+					
+				</div>
+				<div class = "field_info">
+					<p class = "info bold" >Hier werden alle Infos zum ausgewählten feld angezeigt.<br>--------------------</p>
+					<p class = "info" id = "field_info">haha</p>
+				</div>
+				<div class = "general_info">
+					<p class = "info bold" >Hier werden generale Infos angezeigt.<br>--------------------</p>
+					<p class = "info" id ="general_info">Clock:<br>Gold:</p>
+				</div>
+			</div>
+			<table>
+				<tr>
+					<td onclick = "field_selection(this);" class = "field selected_field"></td>
+					<td onclick = "field_selection(this);" class = "field"></td>
+					<td onclick = "field_selection(this);" class = "field"></td>
+					<td onclick = "field_selection(this);" class = "field"></td>
+					<td onclick = "field_selection(this);" class = "field"></td>
+				</tr>
+				<tr>
+					<td onclick = "field_selection(this);" class = "field"></td>
+					<td onclick = "field_selection(this);" class = "field"></td>
+					<td onclick = "field_selection(this);" class = "field"></td>
+					<td onclick = "field_selection(this);" class = "field"></td>
+					<td onclick = "field_selection(this);" class = "field"></td>
+				</tr>
+				<tr>
+					<td onclick = "field_selection(this);" class = "field"></td>
+					<td onclick = "field_selection(this);" class = "field"></td>
+					<td onclick = "field_selection(this);" class = "field"></td>
+					<td onclick = "field_selection(this);" class = "field"></td>
+					<td onclick = "field_selection(this);" class = "field"></td>
+				</tr>
+				<tr>
+					<td onclick = "field_selection(this);" class = "field"></td>
+					<td onclick = "field_selection(this);" class = "field"></td>
+					<td onclick = "field_selection(this);" class = "field"></td>
+					<td onclick = "field_selection(this);" class = "field"></td>
+					<td onclick = "field_selection(this);" class = "field"></td>
+				</tr>
+				<tr>
+					<td onclick = "field_selection(this);" class = "field"></td>
+					<td onclick = "field_selection(this);" class = "field"></td>
+					<td onclick = "field_selection(this);" class = "field"></td>
+					<td onclick = "field_selection(this);" class = "field"></td>
+					<td onclick = "field_selection(this);" class = "field"></td>
+				</tr>
+			</table>
+			<div class = "shop">
+				<p class = "info bold">Hier kannst du Menschen anheuern und Aufträge zur Erbauung von Häusern geben.<br>-----------------------------------------------------------------------------------------------------</p>
+				<div class = "kasten" id = "button_shop_kasten">
+				</div>
+				<div class = "kasten">
+					<p class = "info bold"> Hier werden Infos zum ausgewählten Shopgegenstand angezeigt. </p>
+					<p class = "info" id = "shop_item_info" ></p>
+					<p class = "info button_shop_2 right" onclick = "kaufen();" >Kaufen</p>
+					<p class = "info button_shop_2 right" onclick = "verkaufen();" >Verkaufen</p>
+				</div>
+			</div>
+		</section>
+		<aside>
+		</aside>
+	</body>
+	<script>start();</script>
+</html>
