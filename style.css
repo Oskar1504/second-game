@@ -27,30 +27,6 @@ table, th,td{
 	background-color:SteelBlue;
 	border-width:5px;
 }
-.wald{
-	background-position:center;
-	background-image:url("bilder/wald.png");
-}
-.ocean{
-	background-position:center;
-	background-image:url("bilder/ocean.png");
-}
-.lehm{
-	background-position:center;
-	background-image:url("bilder/lehm.png");
-}
-.wiese{
-	background-position:center;
-	background-image:url("bilder/wiese.png");
-}
-.gebirge{
-	background-position:center;
-	background-image:url("bilder/gebirge.png");
-}
-.mensch{
-	outline: 5px solid Chartreuse;
-	outline-offset:-10px;
-}
 .selected_field{
 	border-width:5px;
 	border-color:red;
@@ -99,6 +75,15 @@ table, th,td{
 	margin-top:5px;
 	
 }
+.market{
+	float:left;
+	width:250px;
+	height:auto;
+	background-color:white;
+	border: 2px solid black;
+	margin-top:5px;
+	
+}
 .kasten{
 	
 	float:left;
@@ -109,6 +94,11 @@ table, th,td{
 	border: 2px solid black;
 	margin:2px;
 	margin-bottom:5px;
+}
+
+.scrollbar{
+	
+	overflow-y: scroll;
 }
 
 .button_shop{
@@ -139,5 +129,8 @@ table, th,td{
 
 .bold{
 	font-weight:bold;
+}
+.hide{
+		opacity: 0;
 }
 

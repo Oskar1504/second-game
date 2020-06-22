@@ -63,13 +63,20 @@
 			</table>
 			<div class = "shop">
 				<p class = "info bold">Hier kannst du Menschen anheuern und Aufträge zur Erbauung von Häusern geben.<br>-----------------------------------------------------------------------------------------------------</p>
-				<div class = "kasten" id = "button_shop_kasten">
+				<div class = "kasten scrollbar" id = "button_shop_kasten">
 				</div>
 				<div class = "kasten">
 					<p class = "info bold"> Hier werden Infos zum ausgewählten Shopgegenstand angezeigt. </p>
 					<p class = "info" id = "shop_item_info" ></p>
 					<p class = "info button_shop_2 right" onclick = "kaufen();" >Kaufen</p>
 					<p class = "info button_shop_2 right" onclick = "verkaufen();" >Verkaufen</p>
+				</div>
+			</div>
+			<div class = "market">
+				<p class = "info bold">Hier kannst du überflüssige Items verkaufen.<br>-------------------------------</p>
+				<p class = "info" onclick = "marketplace();">Öffne Marktplatz</p>
+				<div class = "kasten" id = "marketplace">
+				
 				</div>
 			</div>
 		</section>

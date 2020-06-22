@@ -74,7 +74,7 @@ var haus ={
 var items ={
 	"none":{
 		"id":"none",
-		"amount":10000,
+		"amount":0,
 		"value":0,
 		"price":0
 	},

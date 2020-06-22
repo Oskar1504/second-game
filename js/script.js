@@ -17,7 +17,8 @@ function start(){
 	//pushed für jedes field html element ein field json obj in ein array
 	for(var i=0;i<element_felder.length;i++){
 		array_felder.push(create_field_obj(i));
-		element_felder[i].classList.add(array_felder[i].biom.id);
+		//set texture
+		element_felder[i].style.backgroundImage = 'url(bilder/'+array_felder[i].biom.id+'.png)';
 		/*console.log(array_felder[i].id+"\n"+array_felder[i].type+"\n"+array_felder[i].haus.id);*/
 	}
 	
@@ -136,6 +137,7 @@ function field_selection(id){
 			index_array_felder =i;
 		}
 	}
+	debug_everything();
 	show_field_info();
 }
 
@@ -150,15 +152,15 @@ function button_setup(){
 	}
 	document.getElementById("button_shop_kasten").innerHTML = inner_html_shop;
 	for(var i =0;i<element_button.length;i++){
-		/*if(i==0){
+		if(i==0){
 			element_button[i].classList.add("selected_button");
 			button_selection(element_button[i]);
-		}*/
+		}
 		element_button[i].setAttribute("data-array-button-index",i);
 		element_button[i].innerHTML = array_hauser[i+(button_array_ende-1)].id;
 	}
 }
-
+//button auswahl
 function button_selection(ids){
 	for(var i = 0;i<element_button.length;i++){
 		element_button[i].classList.remove("selected_button");
@@ -171,9 +173,12 @@ function button_selection(ids){
 }
 
 function kaufen(){
-	if(array_hauser[index_array_hauser].preis<gold&&element_felder[index_array_felder].classList.contains(selected_button.id) == false){
+	if(array_hauser[index_array_hauser].preis<gold&&element_felder[index_array_felder].classList.contains(selected_button.id) == false&&array_felder[index_array_felder].biom.id != "ocean"){
 		element_felder[index_array_felder].classList.add(selected_button.id);
+		console.log(selected_button);
+		array_felder[index_array_felder].haus = array_hauser[index_array_hauser];
 		gold = gold-array_hauser[index_array_hauser].preis;
+		element_felder[index_array_felder].style.backgroundImage = 'url(bilder/'+array_hauser[index_array_hauser].id+'.png),url(bilder/'+array_felder[index_array_felder].biom.id+'.png)';
 	}
 }
 function verkaufen(){
@@ -198,6 +203,17 @@ function show_lager_info(){
 	}
 	document.getElementById("lager_info").innerHTML = output;
 }
+
+function marketplace(){
+	var marketplace_inhalt = "<p class = \"info\"><span>dwads</span><span>dwasdw</span></p><p>Swag</p><p>Swag</p><p>Swag</p>";
+	var ment = document.getElementById("marketplace");
+	ment.innerHTML = marketplace_inhalt;
+}
+
+function debug_everything(){
+	console.log(array_felder[1].id + " " +array_felder[1].biom.id + " " +array_felder[1].biom.output + " " +array_felder[1].haus.id + " " +array_felder[1].haus.consume_item  );
+}
+
 
 function debug(input){
 	console.log(input);
